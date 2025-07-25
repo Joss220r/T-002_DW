@@ -1,0 +1,85 @@
+:root {
+            --primario: #5a3dba;
+            --secundario: #9c6eff;
+            --acento: #ffd700;
+            --fondo: #f1efff;
+            --texto-principal: #1e1a30;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0 10px;
+            background-color: var(--fondo);
+            text-align: center;
+        }
+
+        nav {
+            background: linear-gradient(90deg, var(--primario), var(--secundario));
+            padding: 12px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--acento);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 0 15px rgba(90, 61, 186, 0.2);
+        }
+
+        h1 {
+            color: var(--primario);
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--texto-principal);
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+
+        .alerta-error {
+            background-color: #ffe0e0;
+            color: #800000;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }

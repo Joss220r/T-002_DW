@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario de Cocina</title>
+    <link rel="icon" type="image/png" href="../img/ico.png">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <nav>
+        <a href="../view/index.html">Inicio</a>
+        <a href="../view/Recetas.html">Recetas</a>
+        <a href="../view/Categoria.html">Categorías</a>
+        <a href="../view/Contacto.html">Contacto</a>
+    </nav>
+    
+    <h1>Categorías</h1>
+<div class="grid-categorias">
+  <button class="categoria" onclick="mostrarCategoria('desayunos')">Desayunos</button>
+  <button class="categoria" onclick="mostrarCategoria('almuerzos')">Almuerzos</button>
+  <button class="categoria" onclick="mostrarCategoria('cenas')">Cenas</button>
+  <button class="categoria" onclick="mostrarCategoria('postres')">Postres</button>
+  <button class="categoria" onclick="mostrarCategoria('bebidas')">Bebidas</button>
+  <button class="categoria" onclick="mostrarCategoria('panaderia')">Panadería</button>
+</div>
+
+<div id="desayunos" class="container-categoria" style="display: none;">
+  <h3>Desayunos</h3>
+  <p>Ej: Pan con huevo, avena, fruta fresca...</p>
+</div>
+
+<div id="almuerzos" class="container-categoria" style="display: none;">
+  <h3>Almuerzos</h3>
+  <p>Ej: Pollo guisado, arroz, ensalada...</p>
+</div>
+
+<div id="cenas" class="container-categoria" style="display: none;">
+  <h3>Cenas</h3>
+  <p>Ej: Sopa de verduras, tortilla con queso...</p>
+</div>
+
+<div id="postres" class="container-categoria" style="display: none;">
+  <h3>Postres</h3>
+  <p>Ej: Pastel de chocolate, flan, mousse...</p>
+</div>
+
+<div id="bebidas" class="container-categoria" style="display: none;">
+  <h3>Bebidas</h3>
+  <p>Ej: Jugo natural, licuado, café...</p>
+</div>
+
+<div id="panaderia" class="container-categoria" style="display: none;">
+  <h3>Panadería</h3>
+  <p>Ej: Pan dulce, conchas, pan francés...</p>
+</div>
+
+
+<script>
+  function mostrarCategoria(id) {
+    const categorias = document.querySelectorAll('.container-categoria');
+    categorias.forEach(cat => cat.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+    
+</body>
+</html>

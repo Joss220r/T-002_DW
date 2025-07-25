@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario de Cocina</title>
+    <link rel="icon" type="image/png" href="../img/ico.png">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+    <nav>
+        <a href="../view/index.html">Inicio</a>
+        <a href="../view/Recetas.html">Recetas</a>
+        <a href="../view/Categoria.html">Categorías</a>
+        <a href="../view/Contacto.html">Contacto</a>
+    </nav>
+
+    <h1>Contáctanos</h1>
+
+    <div class="container">
+        <form class="form-contacto"
+      onsubmit="event.preventDefault();
+                const msg = document.getElementById('mensaje-exito');
+                msg.style.display = 'block';
+                setTimeout(() => msg.style.display = 'none', 2000);
+                this.reset();">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+        </form>
+
+            <div id="mensaje-exito" class="alerta-exito" style="display:none;">
+            ¡Tu mensaje se envió!
+            </div>
+
+    </div>
+</body>
+</html>
